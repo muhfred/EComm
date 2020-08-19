@@ -10,7 +10,7 @@ namespace API.Extensions
 {
     public static class SwaggerServiceExtensions
     {
-        public static IServiceCollection AddSwagger(this IServiceCollection services)
+        public static IServiceCollection AddSwaggerDocs(this IServiceCollection services)
         {
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
@@ -20,7 +20,7 @@ namespace API.Extensions
             return services;
         }
 
-        public static IApplicationBuilder UseSwagger(this IApplicationBuilder app)
+        public static IApplicationBuilder UseSwaggerDocs(this IApplicationBuilder app)
         {
             // Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger();

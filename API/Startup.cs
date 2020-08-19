@@ -31,7 +31,7 @@ namespace API
             services.AddControllers();
             services.AddDbContext<EcommContext>(x => x.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddApplicationServices();
-            services.AddSwagger();
+            services.AddSwaggerDocs();
             
         }
 
@@ -44,7 +44,7 @@ namespace API
 
             app.UseHttpsRedirection();
 
-            app.UseSwagger();
+            app.UseSwaggerDocs();
 
             app.UseRouting();
 
