@@ -29,7 +29,7 @@ namespace API
         {
             services.AddAutoMapper(typeof(MappingProfiles));
             services.AddControllers();
-            services.AddDbContext<EcommContext>(x => x.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<EcommContext>(x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddApplicationServices();
             services.AddSwaggerDocs();
             services.AddCors(options =>
